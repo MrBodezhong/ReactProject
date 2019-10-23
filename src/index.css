@@ -1,0 +1,29 @@
+body {
+	font: 14px "Century Gothic", Futura, sans-serif;
+	margin: 20px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+ol,
+ul {
+	padding-left: 30px;
+}
+
+.games-items {
+	height: 50px;
+	line-height: 50px;
+	width: 150px;
+	text-align: center;
+}
+
+.games-items:hover {
+	cursor: pointer;
+}
+
+.gamesList {
+	margin-bottom: 20px;
+}
