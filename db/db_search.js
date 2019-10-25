@@ -4,25 +4,17 @@
 
 const search_params = {
     '/websites': function (url = '', params = {}) {
-        
+
+        let url_arr = url.split('/');
         /****url  String  是请求路由  
          * params  Object 是请求参数 */
-        if (JSON.stringify(params) === '{}') {
-            
-            let sql;
-            //查询条件为空 默认搜索全部
-            let url_arr = url.split('/');
-            if (url_arr.length > 2) {
-                //多表关联查询  
-            } else {
-                sql = 'SELECT * FROM ' + url_arr[1]
-            }
-            return sql
-        } else if (typeof params !== 'object') {
-            return false
-        } else {
-
-        }
+        return 'SELECT * FROM ' + url_arr[1]
+    },
+    '/area_table': function (url = '', params = {}) {
+        let url_arr = url.split('/');
+        /****url  String  是请求路由  
+         * params  Object 是请求参数 */
+        return 'SELECT * FROM ' + url_arr[1]
     }
 }
 

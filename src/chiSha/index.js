@@ -10,8 +10,11 @@ class Chisha extends Component {
 			this.http()
 		}}>看看中午吃哪家</div>
 	}
+	componentDidMount() {
+		this.http()
+	}
 	http() {
-		this.props.http.$get('/websites').then((res => {
+		this.props.http.$get('/area_table',{id:3}).then((res => {
 			console.log(res)
 		}))
 	}
