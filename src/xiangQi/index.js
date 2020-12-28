@@ -492,7 +492,7 @@ class Xiangqi extends React.Component {
 				if(next.col > now.col) {
 					//向右
 					let p_ = 0;
-					for(let i = now.col + 1; i < next.col - 1; i++) {
+					for(let i = now.col - 1; i < next.col ; i++) {
 						if(list[i][now.lin].conData) {
 							p_++
 						}
@@ -506,13 +506,12 @@ class Xiangqi extends React.Component {
 				} else if(next.col < now.col) {
 					//向左
 					let p_ = 0;
-					for(let i = now.col - 1; i > next.col + 1; i--) {
+					for(let i = now.col - 1; i > next.col ; i--) {
 						if(list[i][now.lin].conData) {
-
 							p_++
 						}
 
-					}
+          }
 					if(p_ > 1) {
 						return
 					} else if(next.conData && p_ === 0) {

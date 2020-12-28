@@ -11,7 +11,7 @@ class Games extends React.Component {
 		super(props);
 		this.state = {
 			gameList: ['象棋', '飞行棋', '五子棋', '中午吃啥'],
-			nowGame: 3,
+			nowGame: 0,
 			http: http
 		};
 	}
